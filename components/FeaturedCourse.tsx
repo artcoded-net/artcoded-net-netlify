@@ -17,7 +17,7 @@ const FeaturedCourse: React.FC<FeaturedCourse> = ({
   <div className="py-16 max-w-screen-lg flex justify-between space-x-32 mx-auto">
     {courseImageUrl && (
       <div className="w-1/2 relative h-64">
-        <Image src={courseImageUrl} layout="fill" />
+        <Image src={courseImageUrl} layout="fill" alt="Course cover" />
       </div>
     )}
     <div className="w-1/2">

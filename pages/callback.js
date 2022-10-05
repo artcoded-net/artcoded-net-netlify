@@ -1,7 +1,7 @@
 import { AuthorizationCode } from "simple-oauth2";
-import { config } from "../../lib/config";
+import { config } from "../lib/config";
 
-export default async (req, res) => {
+const callback = async (req, res) => {
   const { host } = req.headers;
   const url = new URL(`https://${host}/${req.url}`);
   const urlParams = url.searchParams;
@@ -54,3 +54,5 @@ function renderBody(status, content) {
     </script>
   `;
 }
+
+export default callback;

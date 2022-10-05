@@ -21,9 +21,14 @@ const ServicesPreview: React.FC = () => {
           const { name, description, cover } = service.attributes!;
           const { url: imgSrc } = cover?.data?.attributes || {};
           return (
-            <div className="flex-1 relative">
+            <div className="flex-1 relative" key={`service-${name}`}>
               {imgSrc && (
-                <Image src={getRemoteMedia(imgSrc)} width={480} height={200} />
+                <Image
+                  src={getRemoteMedia(imgSrc)}
+                  width={480}
+                  height={200}
+                  alt="Service cover"
+                />
               )}
               <h4 className="font-medium text-brand text-xl my-2">{name}</h4>
               <p>{description}</p>
