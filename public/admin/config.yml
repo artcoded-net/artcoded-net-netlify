@@ -1,8 +1,8 @@
 backend:
   name: github # our repository provider
-  repo: username/repository # username/repo
-  branch: master # the main branch of our repo
-  base_url: "https://example.com" # our site's base URL
+  repo: artcoded-net/artcoded-net-netlify # username/repo
+  branch: main # the main branch of our repo
+  base_url: "https://newsite.artcoded.com" # our site's base URL
   auth_endpoint: "api/auth" # used together with base_url for our custom endpoints (more on this later)
 media_folder: "public/images" # the folder we want to upload new images to
 public_folder: "/images" # the folder our images should be fetched from
