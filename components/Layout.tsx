@@ -1,22 +1,8 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
-import Footer from "./Footer";
-import Loading from "./Loading";
-import Navbar from "./Navbar";
-import Error from "./Error";
-import { useCompanyInfoQuery } from "../data/generated";
-import SeoGlobalConfig from "./SeoGlobalConfig";
+// import SeoGlobalConfig from "./SeoGlobalConfig";
 
 const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
-  const { data, error, loading } = useCompanyInfoQuery();
-
-  if (loading) return <Loading />;
-  if (error) return <Error message={error.message} />;
-
-  const { companyName, companyAddress, logo, companyEmail, socialLinks, vat } =
-    data!.companyInfo?.data?.attributes!;
-  const companyLogoUrl = logo?.data?.attributes?.url!;
-
   return (
     <>
       <Head>
@@ -94,16 +80,9 @@ const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <SeoGlobalConfig />
-      <Navbar companyName={companyName || ""} companyLogoUrl={companyLogoUrl} />
+      {/* <SeoGlobalConfig /> */}
+
       <>{children}</>
-      <Footer
-        companyName={companyName}
-        companyEmail={companyEmail}
-        socialLinks={socialLinks}
-        companyAddress={companyAddress ?? undefined}
-        vat={vat}
-      />
     </>
   );
 };
