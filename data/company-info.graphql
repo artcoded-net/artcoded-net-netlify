@@ -1,0 +1,23 @@
+query CompanyInfo {
+  companyInfo {
+    data {
+      attributes {
+        logo {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+        socialLinks {
+          socialMedia
+          link
+        }
+        companyName
+        companyEmail
+        companyAddress
+        vat
+      }
+    }
+  }
+}

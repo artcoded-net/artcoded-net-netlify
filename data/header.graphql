@@ -1,0 +1,20 @@
+query Header {
+  header {
+    data {
+      attributes {
+        showLogo
+        showProfileLink
+        menu {
+          data {
+            attributes {
+              menuItems {
+                label
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

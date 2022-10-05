@@ -1,0 +1,18 @@
+query Courses {
+  courses {
+    data {
+      attributes {
+        title
+        description
+        slug
+        images {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}

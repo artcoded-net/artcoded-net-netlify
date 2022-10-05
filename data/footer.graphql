@@ -1,0 +1,12 @@
+query Footer {
+  footer {
+    data {
+      attributes {
+        socialLinks {
+          socialMedia
+          link
+        }
+      }
+    }
+  }
+}
