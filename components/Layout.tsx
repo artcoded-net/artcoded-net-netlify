@@ -99,7 +99,6 @@ const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
       <>{children}</>
       <Footer
         companyName={companyName}
-        companyLogoUrl={companyLogoUrl}
         companyEmail={companyEmail}
         socialLinks={socialLinks}
         companyAddress={companyAddress ?? undefined}
