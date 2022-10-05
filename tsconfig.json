@@ -19,7 +19,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "pages/courses/[courseSlug]"
+    "pages/courses/[courseSlug]",
+    "pages/api/auth.js",
+    "lib/config.js"
   ],
   "exclude": ["node_modules"]
 }
