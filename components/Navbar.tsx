@@ -1,10 +1,5 @@
-import { useHeaderQuery } from "../data/generated";
-import { getRemoteMedia } from "../data/utils/remoteMedia";
 import Image from "next/image";
 import NavLink from "./NavLink";
-import Loading from "./Loading";
-import Error from "./Error";
-import Button from "./Button";
 import Link from "next/link";
 
 interface NavbarProps {
@@ -13,23 +8,16 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ companyName, companyLogoUrl }) => {
-  const { data, error, loading } = useHeaderQuery();
-
-  if (loading) return <Loading />;
-  if (error) return <Error message={error.message} />;
-
-  const { showLogo, showProfileLink, menu } =
-    data?.header?.data?.attributes || {};
-  const { menuItems } = menu?.data?.attributes || {};
+  const menuItems: any[] = [];
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
-          {showLogo && companyLogoUrl && (
+          {companyLogoUrl && (
             <div className="relative h-6 w-6 sm:h-12 sm:w-12 mr-3">
               <Image
-                src={getRemoteMedia(companyLogoUrl)}
+                src={companyLogoUrl}
                 layout="fill"
                 alt={`${companyName} Logo`}
               />
@@ -66,14 +54,12 @@ const Navbar: React.FC<NavbarProps> = ({ companyName, companyLogoUrl }) => {
             {menuItems &&
               menuItems.map((item, index) => (
                 <li key={`navlink-${index}`}>
-                  <NavLink label={item!.label} path={item!.url} />
+                  <NavLink label={item!.label} href={item!.url} />
                 </li>
               ))}
-            {showProfileLink && (
-              <li>
-                <NavLink label="Login" path="/auth" />
-              </li>
-            )}
+            <li>
+              <NavLink label="Login" href="/auth" />
+            </li>
           </ul>
         </div>
       </div>

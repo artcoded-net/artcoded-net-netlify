@@ -1,14 +1,12 @@
-import { link } from "fs";
-import { Maybe } from "graphql/jsutils/Maybe";
-import { ComponentConfigSocialLink, Scalars } from "../data/generated";
+import { Link } from "../types";
 import SocialIcon from "./SocialIcon";
 
 interface FooterProps {
   companyName: string;
   companyEmail: string;
   companyAddress?: string;
-  socialLinks?: Maybe<Array<Omit<ComponentConfigSocialLink, "id"> | null>>;
-  vat?: Maybe<Scalars["String"]>;
+  socialLinks?: Link[];
+  vat?: string;
 }
 
 const Footer: React.FC<FooterProps> = ({
@@ -22,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({
     {socialLinks && (
       <div className="flex space-x-4">
         {socialLinks.map(
-          (socialLink) =>
+          (socialLink: any) =>
             socialLink && (
               <SocialIcon
                 href={socialLink.link}

@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { ComponentLayoutHero, ComponentLayoutLink } from "../data/generated";
-import { getRemoteMedia } from "../data/utils/remoteMedia";
+import { Link } from "../types";
 import Button from "./Button";
 
 interface HeroProps {
-  buttons?: Array<Omit<ComponentLayoutLink, "id"> | null>;
+  buttons?: Link[];
   callToAction: string;
   imageSrc?: string;
   subtitle?: string;
@@ -34,14 +33,14 @@ const Hero: React.FC<HeroProps> = ({
                 <Button
                   type="primary"
                   withArrow
-                  href={buttons[0]!.url}
+                  href={buttons[0]!.href}
                   label={buttons[0]!.label}
                 />
               )}
               {buttons!.length >= 2 && (
                 <Button
                   type="secondary"
-                  href={buttons[1]!.url}
+                  href={buttons[1]!.href}
                   label={buttons[1]!.label}
                 />
               )}
@@ -50,7 +49,7 @@ const Hero: React.FC<HeroProps> = ({
         </div>
         {imageSrc && (
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex relative">
-            <Image src={getRemoteMedia(imageSrc)} alt="mockup" layout="fill" />
+            <Image src={imageSrc} alt="mockup" layout="fill" />
           </div>
         )}
       </div>

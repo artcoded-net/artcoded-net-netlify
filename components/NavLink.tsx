@@ -1,14 +1,10 @@
 import { useRouter } from "next/router";
 import { clsx } from "clsx";
+import { Link } from "../types";
 
-interface NavLinkProps {
-  label: string;
-  path: string;
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ label, path }) => {
+const NavLink: React.FC<Link> = ({ label, href }) => {
   const router = useRouter();
-  const isCurrent = router.pathname == path;
+  const isCurrent = router.pathname == href;
 
   const style = clsx(
     "block py-2 pr-4 pl-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 dark:hover:bg-gray-700 md:dark:hover:bg-transparent",
@@ -19,7 +15,7 @@ const NavLink: React.FC<NavLinkProps> = ({ label, path }) => {
 
   return (
     <a
-      href={path}
+      href={href}
       className={style}
       aria-current={isCurrent ? "page" : undefined}
     >

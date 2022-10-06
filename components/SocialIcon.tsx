@@ -1,4 +1,4 @@
-import { Enum_Componentconfigsociallink_Socialmedia } from "../data/generated";
+import { SocialNetwork } from "../types";
 import GithubIcon from "./icons/Github";
 import TwitterIcon from "./icons/Twitter";
 import YouTubeIcon from "./icons/YouTube";
@@ -6,7 +6,7 @@ import YouTubeIcon from "./icons/YouTube";
 interface SocialIconProps {
   href: string;
   dimension: number;
-  socialMedia: Enum_Componentconfigsociallink_Socialmedia;
+  socialMedia: SocialNetwork;
 }
 
 const SocialIcon: React.FC<SocialIconProps> = ({
@@ -16,13 +16,13 @@ const SocialIcon: React.FC<SocialIconProps> = ({
 }) => {
   let Icon: React.FC;
   switch (socialMedia) {
-    case Enum_Componentconfigsociallink_Socialmedia.Github:
+    case SocialNetwork.GITHUB:
       Icon = () => <GithubIcon dimension={dimension} />;
       break;
-    case Enum_Componentconfigsociallink_Socialmedia.Youtube:
+    case SocialNetwork.YOUTUBE:
       Icon = () => <YouTubeIcon dimension={dimension} />;
       break;
-    case Enum_Componentconfigsociallink_Socialmedia.Twitter:
+    case SocialNetwork.TWITTER:
       Icon = () => <TwitterIcon dimension={dimension} />;
       break;
     default:
