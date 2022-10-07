@@ -1,19 +1,20 @@
+import { NextApiRequest, NextApiResponse } from "next";
 import { AuthorizationCode } from "simple-oauth2";
 import { config } from "../lib/config";
 
-const callback = async (req, res) => {
-  const { host } = req.headers;
+const callback = async (req: NextApiRequest, res: NextApiResponse) => {
+  const { host } = req.headers || {};
   const url = new URL(`https://${host}/${req.url}`);
   const urlParams = url.searchParams;
   const code = urlParams.get("code");
   const provider = urlParams.get("provider");
 
   // we recreate the client we used to make the request
-  const client = new AuthorizationCode(config(provider));
+  const client = new AuthorizationCode(config);
 
   // create our token object
   const tokenParams = {
-    code,
+    code: code ?? "",
     redirect_uri: `https://${host}/api/callback?provider=${provider}`,
   };
 
@@ -37,7 +38,7 @@ const callback = async (req, res) => {
 
 // This renders a simple page with javascript that allows the pop-up page
 // to communicate with its opener
-function renderBody(status, content) {
+function renderBody(status: any, content: any) {
   return `
     <script>
       const receiveMessage = (message) => {
