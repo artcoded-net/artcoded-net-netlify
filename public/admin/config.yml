@@ -31,7 +31,7 @@ collections:
           widget: "relation",
           collection: "tag",
           search_fields: ["title"],
-          value_field: "title"
+          value_field: "title",
           display_fields: ["title"]
         }
       - { label: "Cover image", name: "cover", widget: "image"}
