@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { AuthorizationCode } from "simple-oauth2";
-import { config } from "../lib/config";
+import { config } from "../../lib/config";
 
 const callback = async (req: NextApiRequest, res: NextApiResponse) => {
   const { host } = req.headers || {};

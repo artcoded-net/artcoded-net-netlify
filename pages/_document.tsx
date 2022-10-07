@@ -7,7 +7,7 @@ export default function Document() {
     <Html>
       <Head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:400,700&display=optional"
+          href="https://fonts.googleapis.com/css2?family=Montserrat&display=optional"
           rel="stylesheet"
         />
         {/* Netlify Widget */}
