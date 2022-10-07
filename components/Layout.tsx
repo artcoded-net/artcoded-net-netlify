@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
+import Navbar from "./Navbar";
 // import SeoGlobalConfig from "./SeoGlobalConfig";
 
 const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
@@ -81,7 +82,7 @@ const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       {/* <SeoGlobalConfig /> */}
-
+      <Navbar />
       <>{children}</>
     </>
   );

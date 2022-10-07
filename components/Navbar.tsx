@@ -16,11 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ companyName, companyLogoUrl }) => {
         <Link href="/" className="flex items-center">
           {companyLogoUrl && (
             <div className="relative h-6 w-6 sm:h-12 sm:w-12 mr-3">
-              <Image
-                src={companyLogoUrl}
-                layout="fill"
-                alt={`${companyName} Logo`}
-              />
+              <Image src={companyLogoUrl} layout="fill" alt="Artcoded Logo" />
             </div>
           )}
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
