@@ -39,7 +39,7 @@ collections:
         label: "Seo",
         name: "seo", 
         widget: "object", 
-        summary: '{{fields.title}}',, 
+        summary: '{{fields.title}}',
         fields: 
           - { label: "Meta title", name: "title", widget: "string" }
           - { label: "Meta description", name: "description", widget: "text" }
