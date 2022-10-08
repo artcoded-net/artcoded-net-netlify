@@ -84,6 +84,7 @@ const config = {
           name: "company-info",
           file: "content/company-info.yml",
           fields: [
+            { label: "Company name", name: "company-name", widget: "string" },
             { label: "Logo", name: "logo", widget: "image" },
             {
               label: "Social links",

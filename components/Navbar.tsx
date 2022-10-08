@@ -3,10 +3,13 @@ import NavLink from "./NavLink";
 import Link from "next/link";
 //@ts-ignore
 import navMenuItems from "../content/nav-menu.yml";
+//@ts-ignore
+import companyInfo from "../content/company-info.yml";
 import { LinkItem } from "../lib/types";
 
 const Navbar: React.FC = () => {
   const menuItems: LinkItem[] = navMenuItems["menu-items"];
+  const { logoUrl } = companyInfo;
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
