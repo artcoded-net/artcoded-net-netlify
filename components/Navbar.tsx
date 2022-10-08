@@ -2,27 +2,28 @@ import Image from "next/image";
 import NavLink from "./NavLink";
 import Link from "next/link";
 //@ts-ignore
-import navMenuItems from "../content/nav-menu.yml";
+// import navMenuItems from "../content/nav-menu.yml";
 //@ts-ignore
-import companyInfo from "../content/company-info.yml";
+// import companyInfo from "../content/company-info.yml";
 import { LinkItem } from "../lib/types";
 
 const Navbar: React.FC = () => {
-  const menuItems: LinkItem[] = navMenuItems.menuItems;
-  const { logo, companyName } = companyInfo;
+  // const menuItems: LinkItem[] = navMenuItems.menuItems;
+  // const { logo, companyName } = companyInfo;
+  const menuItems: any[] = [];
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
           <div className="flex">
-            {logo && (
+            {/* {logo && (
               <div className="relative h-6 w-6 sm:h-12 sm:w-12 mr-3">
                 <Image src={logo} layout="fill" alt="Artcoded Logo" />
               </div>
-            )}
+            )} */}
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              {companyName}
+              Artcoded
             </span>
           </div>
         </Link>
