@@ -2,7 +2,7 @@
 title: The Complete Strapi Course
 subtitle: The only Strapi v4 course you'll ever need! From the basics to
   building a full app, a plugin and production deployment!
-call-to-action: Master the Strapi CMS by building and deploying a complete app and plugin
+callToAction: Master the Strapi CMS by building and deploying a complete app and plugin
 cover: /uploads/strapi-course-logo-new-2.png
 video: https://www.youtube.com/watch?v=e9hqEtRmcOw
 description: >-
@@ -66,9 +66,9 @@ description: >-
 
   The Strapi name and logo are property of Strapi Solutions SAS and are shown, as well as parts of the Strapi application, for educational purposes. This course is published independently, with no affiliation with Strapi Solutions SAS.
 udemy:
-  referral-url: https://www.udemy.com/course/strapi-course/?referralCode=A45D300BA492E76B86F8
-  coupon-url: https://www.udemy.com/course/strapi-course/?couponCode=STRAPI-OCTOBER
-skillshare-url: todo
+  referralUrl: https://www.udemy.com/course/strapi-course/?referralCode=A45D300BA492E76B86F8
+  couponUrl: https://www.udemy.com/course/strapi-course/?couponCode=STRAPI-OCTOBER
+skillshareUrl: todo
 link: https://www.udemy.com/course/strapi-course?referralCode=A45D300BA492E76B86F8
 ---
 
