@@ -53,7 +53,7 @@ const config = {
       fields: [
         { label: "Title", name: "title", widget: "string" },
         { label: "Subtitle", name: "subtitle", widget: "text" },
-        { label: "Call to action", name: "callToAction", widget: "string" },
+        { label: "Call to action", name: "call_to_action", widget: "string" },
         { label: "Cover image", name: "cover", widget: "image" },
         { label: "Youtube teaser URL", name: "video", widget: "string" },
         { label: "Description", name: "description", widget: "markdown" },
@@ -66,13 +66,13 @@ const config = {
           fields: [
             {
               label: "Udemy referral url",
-              name: "referralUrl",
+              name: "referral_url",
               widget: "string",
             },
-            { label: "Udemy coupon url", name: "couponUrl", widget: "string" },
+            { label: "Udemy coupon url", name: "coupon_url", widget: "string" },
           ],
         },
-        { label: "Skillshare URL", name: "skillshareUrl", widget: "string" },
+        { label: "Skillshare URL", name: "skillshare_url", widget: "string" },
       ],
     },
     {
@@ -81,14 +81,14 @@ const config = {
       files: [
         {
           label: "Company Info",
-          name: "companyInfo",
+          name: "company_info",
           file: "content/company-info.yml",
           fields: [
-            { label: "Company name", name: "companyName", widget: "string" },
+            { label: "Company name", name: "company_name", widget: "string" },
             { label: "Logo", name: "logo", widget: "image" },
             {
               label: "Social links",
-              name: "socialLinks",
+              name: "social_links",
               widget: "object",
               fields: [
                 { label: "Github link", name: "github", widget: "string" },
@@ -115,7 +115,7 @@ const config = {
           fields: [
             {
               label: "Menu items",
-              name: "menuItems",
+              name: "menu_items",
               widget: "list",
               fields: [
                 {
