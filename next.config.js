@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const withYaml = require("next-plugin-yaml");
+// const withYaml = require("next-plugin-yaml");
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -8,4 +8,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withYaml(nextConfig);
+module.exports = nextConfig;

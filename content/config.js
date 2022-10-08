@@ -110,7 +110,7 @@ const config = {
         },
         {
           label: "Nav menu",
-          name: "navMenu",
+          name: "nav_menu",
           file: "/content/nav-menu.yml",
           fields: [
             {
