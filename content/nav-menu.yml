@@ -1,2 +1,5 @@
 label: Home
 link: /
+menu-item:
+  - label: Home
+    link: /
