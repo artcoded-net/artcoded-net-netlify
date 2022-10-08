@@ -21,7 +21,8 @@
     "**/*.tsx",
     "pages/courses/[courseSlug]",
     "pages/api/auth.ts",
-    "lib/config.ts"
+    "lib/config.ts",
+    "content/config.js"
   ],
   "exclude": ["node_modules"]
 }
