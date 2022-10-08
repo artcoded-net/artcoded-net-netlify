@@ -3,3 +3,6 @@ link: /
 menu-item:
   - label: Home
     link: /
+menu-items:
+  - label: Home
+    link: /
