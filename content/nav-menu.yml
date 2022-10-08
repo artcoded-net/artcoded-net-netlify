@@ -1,8 +1,9 @@
-label: Home
-link: /
-menu-item:
-  - label: Home
-    link: /
 menu-items:
   - label: Home
     link: /
+  - label: Courses
+    link: /courses
+  - label: Blog
+    link: /blog
+  - label: About
+    link: /about
