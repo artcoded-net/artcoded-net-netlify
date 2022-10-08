@@ -9,19 +9,20 @@ import { LinkItem } from "../lib/types";
 
 const Navbar: React.FC = () => {
   const menuItems: LinkItem[] = navMenuItems["menu-items"];
-  const { logoUrl } = companyInfo;
+  const { logo, companyName } = companyInfo;
+  console.log(companyInfo);
 
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
         <Link href="/" className="flex items-center">
-          {/* {companyLogoUrl && (
+          {logo && (
             <div className="relative h-6 w-6 sm:h-12 sm:w-12 mr-3">
-              <Image src={companyLogoUrl} layout="fill" alt="Artcoded Logo" />
+              <Image src={logo} layout="fill" alt="Artcoded Logo" />
             </div>
-          )} */}
+          )}
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Artcoded
+            {companyName}
           </span>
         </Link>
         <button

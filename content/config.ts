@@ -53,7 +53,7 @@ const config = {
       fields: [
         { label: "Title", name: "title", widget: "string" },
         { label: "Subtitle", name: "subtitle", widget: "text" },
-        { label: "Call to action", name: "call-to-action", widget: "string" },
+        { label: "Call to action", name: "callToAction", widget: "string" },
         { label: "Cover image", name: "cover", widget: "image" },
         { label: "Youtube teaser URL", name: "video", widget: "string" },
         { label: "Description", name: "description", widget: "markdown" },
@@ -66,13 +66,13 @@ const config = {
           fields: [
             {
               label: "Udemy referral url",
-              name: "referral-url",
+              name: "referralUrl",
               widget: "string",
             },
-            { label: "Udemy coupon url", name: "coupon-url", widget: "string" },
+            { label: "Udemy coupon url", name: "couponUrl", widget: "string" },
           ],
         },
-        { label: "Skillshare URL", name: "skillshare-url", widget: "string" },
+        { label: "Skillshare URL", name: "skillshareUrl", widget: "string" },
       ],
     },
     {
@@ -81,14 +81,14 @@ const config = {
       files: [
         {
           label: "Company Info",
-          name: "company-info",
+          name: "companyInfo",
           file: "content/company-info.yml",
           fields: [
-            { label: "Company name", name: "company-name", widget: "string" },
+            { label: "Company name", name: "companyName", widget: "string" },
             { label: "Logo", name: "logo", widget: "image" },
             {
               label: "Social links",
-              name: "social-links",
+              name: "socialLinks",
               widget: "object",
               fields: [
                 { label: "Github link", name: "github", widget: "string" },
@@ -110,12 +110,12 @@ const config = {
         },
         {
           label: "Nav menu",
-          name: "nav-menu",
+          name: "navMenu",
           file: "/content/nav-menu.yml",
           fields: [
             {
               label: "Menu items",
-              name: "menu-items",
+              name: "menuItems",
               widget: "list",
               fields: [
                 {
