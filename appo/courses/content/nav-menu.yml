@@ -1,0 +1,9 @@
+menuItems:
+  - label: Home
+    link: /
+  - label: Courses
+    link: /courses
+  - label: Blog
+    link: /blog
+  - label: About
+    link: /about
